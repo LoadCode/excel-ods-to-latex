@@ -1,5 +1,6 @@
 # Project specific
 *.*#
+maximal_test_ods/
 
 # Prerequisites
 *.d
