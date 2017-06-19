@@ -78,20 +78,21 @@ Examinando el documento de experimentación que se creó (la hoja de cálculo), 
 	```xml
     ```
 
+#### Valores de atributos
 Los estilos de *Celda* son de particular interés, ya que entregan la información explícita tanto del texto de una celda determinada como de su fondo, etc. Es importante tener en cuenta que dentro de la definición de un estilo, es decir dentro de las etiquetas `<style:style>  </style:style>` se puede encontrar lo siguiente:
 
    * Atributos de `<style:style atributos..>` pueden ser:
    	*	`style:name="identificador"`: Como se mencionaba anteriormente corresponderá al nombre o *etiqueta* que se le da al estilo y con el cual será referenciado a lo largo del documento (hoja de cálculo). Puede tomar valores de la forma: `"ce<i>"` (celdas), `"T<i>"` (estilos para texto).
    	*	Son de particular interés los siguientes estilos que se indican al interior de las etiquetas `<style:style>  estilos  </style:style>`:
-   		*	`<style:table-cell-properties  .... />` cuyos atributos pueden ser:
+   		*	`<style:table-cell-properties  .... />` Cuyos atributos pueden ser:
    			*	`fo:background-color="#8DB4E2"`: Que indicará el color de fondo de la celda.
-   			*	
 
-#### Valores de atributos
-En la definición de estilos y como resultado de la exploración con diferentes archivos generados principalmente con el software Excel de Microsoft, es posible concluir que los atributos de mayor interés son:
-*	style:name = "Identificador":
-*	style:family = "Identificador":
-*	fo:background-color = "#xxxxxx":
-*	style:text-underline-style="solid":
-*	fo:font-weight = "bold":
-*	fo:font-style ="italic"
+   		*	`<style:text-properties .../>` Cuyos atributos pueden ser:
+   			*	`fo:color="#1F497D"`: Que indicará el color del texto.
+   			*	`fo:font-size="18pt"`: Que indicará el tamaño de la letra.
+   			*	`fo:font-style="italic"`
+   			*	`style:text-underline-style="solid"`
+   			*	`fo:font-weight="bold"`
+   		*	`<style:paragraph-properties .../>`: Cuyos atributos pueden ser:
+   			*	`fo:text-align="center"`: Que indicará la alineación del texto en la celda, los valores posibles para este atributo son: `center`, `right` y `left`.
+
